@@ -4,6 +4,7 @@
 #include "game.h"
 #include "keyboard.h"
 #include "screen.h"
+#include "cli.h" 
 
 int main() {
     Game game;
