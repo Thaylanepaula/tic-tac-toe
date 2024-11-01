@@ -1,21 +1,21 @@
-#include <stdio.h>
 #include "screen.h"
+#include "cli.h"  
 
 void showInstructions() {
-    printf("Bem-vindo ao Secret Seeker!\n");
-    printf("Tente adivinhar o número secreto entre 1 e 100.\n");
-    printf("Você tem 10 tentativas. Boa sorte!\n\n");
+    cli_print("Bem-vindo ao Secret Seeker!\n");
+    cli_print("Adivinhe o número secreto entre 1 e 100. Você tem 10 tentativas. Boa sorte!\n");
 }
 
 void showMessage(const char *message) {
-    printf("%s", message);
+    cli_print("%s\n", message); 
 }
 
 void showGuesses(int *guesses, int totalGuesses) {
-    printf("Palpites feitos: ");
+    cli_print("Seus palpites: ");
     for (int i = 0; i < totalGuesses; i++) {
-        printf("%d ", guesses[i]);
+        cli_print("%d ", guesses[i]);
     }
-    printf("\n");
+    cli_print("\n");
 }
+
 
