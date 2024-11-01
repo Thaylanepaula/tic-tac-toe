@@ -9,13 +9,13 @@ int main() {
     Game game;
     initializeGame(&game);
 
-    showInstructions(); // Função para mostrar as instruções ao jogador
+    showInstructions(); 
 
     while (game.attempts > 0) {
-        playTurn(&game); // Captura e processa o palpite do jogador
+        playTurn(&game); 
     }
 
-    endGame(&game); // Mostra o resultado final e libera a memória
+    endGame(&game); 
 
     return 0;
 }
